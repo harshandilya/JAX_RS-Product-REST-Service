@@ -1,0 +1,3 @@
+package com.harsh.productapi.exception;
+import com.harsh.productapi.model.ProblemResponse; import jakarta.ws.rs.WebApplicationException; import jakarta.ws.rs.core.*; import jakarta.ws.rs.ext.*; import java.util.List;
+@Provider public class GenericExceptionMapper implements ExceptionMapper<Throwable>{@Context UriInfo uri;public Response toResponse(Throwable ex){if(ex instanceof WebApplicationException w)return w.getResponse();return Response.status(500).type("application/problem+json").entity(ProblemResponse.of("Internal Server Error",500,"An unexpected server error occurred",uri.getRequestUri().getPath(),List.of())).build();}}

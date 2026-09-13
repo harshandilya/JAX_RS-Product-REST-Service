@@ -1,0 +1,9 @@
+com\harsh\productapi\ProductApplication.class
+com\harsh\productapi\exception\JsonExceptionMapper.class
+com\harsh\productapi\model\ProblemResponse.class
+com\harsh\productapi\resource\ProductResource.class
+com\harsh\productapi\exception\GenericExceptionMapper.class
+com\harsh\productapi\service\ProductService.class
+com\harsh\productapi\model\PagedProducts.class
+com\harsh\productapi\model\Product.class
+com\harsh\productapi\repository\ProductRepository.class
